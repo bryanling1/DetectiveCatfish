@@ -49,6 +49,9 @@ public class Book : MonoBehaviour
                 dragModeOn();
             }
         }else{
+            if(holdTimer < holdSecondsToDrag && holdTimer > 0){
+                openBook();
+            }
             holdTimer = 0f;
             bookSprite.color = UnityEngine.Color.white;
         }
