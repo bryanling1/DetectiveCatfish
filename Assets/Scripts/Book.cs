@@ -9,8 +9,10 @@ public class Book : MonoBehaviour
     [SerializeField] float minY = 4f;
     [SerializeField] float maxY = 10f;
     [SerializeField] float holdSecondsToDrag = 0.6f;
+    [SerializeField] GameObject OpenedBook;
     float deltaX, deltaY;
     float holdTimer = 0f;
+    [SerializeField] bool isBookOpen = false;
 
     BoxCollider2D boxCollider; 
     SpriteRenderer bookSprite;
@@ -72,11 +74,21 @@ public class Book : MonoBehaviour
         }
 
     }
-    // private void setBookOrder(){
-    //     FindObjectOfType<Books>().setAllBooksToFirstLayer();
-    // }
 
     private void openBook(){
-        Debug.Log("open book");
+        if(books.isABookOpen() == false){
+            OpenedBook.SetActive(true);
+            books.openTheBook();
+            isBookOpen = true;
+        }
+        
     }
+    public void closeBook(){
+        if(isBookOpen == true){
+            OpenedBook.SetActive(false);
+            isBookOpen = false;
+            books.closeTheBook();
+        }
+    }
+
 }

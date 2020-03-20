@@ -4,17 +4,7 @@ using UnityEngine;
 
 public class Books : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    bool isBookOpen = false;
 
     public void setAllBooksToFirstLayer(){
         var books = GetComponentsInChildren<SpriteRenderer>();
@@ -22,5 +12,19 @@ public class Books : MonoBehaviour
             books[i].sortingOrder = 1;
         }
     }
+
+    public void openTheBook(){
+        isBookOpen = true;
+    }
+
+    public void closeTheBook(){
+        isBookOpen = false;
+    }
+
+    public bool isABookOpen(){
+        return isBookOpen;
+    }
+
+
 
 }
