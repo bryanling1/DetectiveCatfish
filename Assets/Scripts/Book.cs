@@ -10,6 +10,7 @@ public class Book : MonoBehaviour
     [SerializeField] float maxY = 10f;
     [SerializeField] float holdSecondsToDrag = 0.6f;
     [SerializeField] GameObject OpenedBook;
+    
     float deltaX, deltaY;
     float holdTimer = 0f;
     [SerializeField] bool isBookOpen = false;
