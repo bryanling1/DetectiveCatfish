@@ -10,33 +10,22 @@ public class Book : MonoBehaviour
     [SerializeField] float maxY = 10f;
     [SerializeField] float holdSecondsToDrag = 0.6f;
     float deltaX, deltaY;
-    bool isDragging = false;
-    
+    float holdTimer = 0f;
 
     BoxCollider2D boxCollider; 
     SpriteRenderer bookSprite;
+    Books books;
+    
     
     // Update is called once per frame
     void Start(){
         boxCollider = GetComponent<BoxCollider2D>();
         bookSprite = GetComponent<SpriteRenderer>();
+        books = FindObjectOfType<Books>();
     }
     void Update()
     {
         dragMode();
-    }
-
-
-    IEnumerator activeDragMode(){
-        yield return new WaitForSeconds(holdSecondsToDrag);
-        if(isTouchingBook()){
-            bookSprite.color = UnityEngine.Color.gray;
-            dragModeOn();
-        }else{
-            bookSprite.color = UnityEngine.Color.white;
-            StopAllCoroutines();
-        }   
-        
     }
 
     private bool isTouchingBook(){
@@ -44,6 +33,8 @@ public class Book : MonoBehaviour
             Touch touch = Input.GetTouch(0);
             Vector2 touchPos = Camera.main.ScreenToWorldPoint(touch.position);
             if(boxCollider == Physics2D.OverlapPoint(touchPos)){
+                books.setAllBooksToFirstLayer();
+                GetComponent<SpriteRenderer>().sortingOrder = 2;
                 return true;
             }
             return false;
@@ -52,13 +43,19 @@ public class Book : MonoBehaviour
     }
 
     private void dragMode(){
-        if(Input.touchCount > 0){
-            if(isTouchingBook()){
-                StartCoroutine(activeDragMode());
+        if(Input.touchCount > 0 && isTouchingBook()){
+            holdTimer += Time.deltaTime;
+            if(holdTimer > holdSecondsToDrag){
+                dragModeOn();
             }
+        }else{
+            holdTimer = 0f;
+            bookSprite.color = UnityEngine.Color.white;
         }
+
     }
     private void dragModeOn(){
+        bookSprite.color = UnityEngine.Color.gray;
         Touch touch = Input.GetTouch(0);   
         Vector2 touchPos = Camera.main.ScreenToWorldPoint(touch.position);
 
@@ -71,5 +68,12 @@ public class Book : MonoBehaviour
             transform.position = new Vector3(newX, newY, transform.position.z);
         }
 
+    }
+    // private void setBookOrder(){
+    //     FindObjectOfType<Books>().setAllBooksToFirstLayer();
+    // }
+
+    private void openBook(){
+        Debug.Log("open book");
     }
 }
