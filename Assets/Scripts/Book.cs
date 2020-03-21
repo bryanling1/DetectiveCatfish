@@ -10,7 +10,7 @@ public class Book : MonoBehaviour
     [SerializeField] float maxY = 10f;
     [SerializeField] float holdSecondsToDrag = 0.6f;
     [SerializeField] GameObject OpenedBook;
-    
+
     float deltaX, deltaY;
     float holdTimer = 0f;
     [SerializeField] bool isBookOpen = false;
@@ -81,6 +81,7 @@ public class Book : MonoBehaviour
             OpenedBook.SetActive(true);
             books.openTheBook();
             isBookOpen = true;
+            gameObject.SetActive(false);
         }
         
     }
@@ -89,6 +90,7 @@ public class Book : MonoBehaviour
             OpenedBook.SetActive(false);
             isBookOpen = false;
             books.closeTheBook();
+            gameObject.SetActive(true);
         }
     }
 

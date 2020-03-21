@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 157816108378190978}
   - component: {fileID: 157816108378190981}
+  - component: {fileID: 1004067717}
+  - component: {fileID: 1004067718}
   m_Layer: 0
   m_Name: BookLeftArrow
   m_TagString: Untagged
@@ -68,9 +70,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: 7855aa910d848be4bb236f542b3f0b17, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -80,6 +82,44 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1004067717
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 157816108378190979}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.03330636, y: -0.048074126}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.82, y: 0.72}
+    newSize: {x: 0.82, y: 0.72}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.3454976, y: 0.89010835}
+  m_EdgeRadius: 0
+--- !u!114 &1004067718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 157816108378190979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1adc68f70e9f68043b526a2f16a115dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &157816108813678218
 GameObject:
   m_ObjectHideFlags: 0
@@ -90,6 +130,7 @@ GameObject:
   m_Component:
   - component: {fileID: 157816108813678220}
   - component: {fileID: 157816108813678221}
+  - component: {fileID: 499374478}
   m_Layer: 0
   m_Name: BookTestOpen
   m_TagString: Untagged
@@ -166,6 +207,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &499374478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 157816108813678218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: baf8719d478709c48b8bfc8c7743a263, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Pages:
+  - {fileID: 157816109307865272}
+  - {fileID: 157816109886830593}
+  - {fileID: 2533476808886645182}
+  leftArrow: {fileID: 157816108378190979}
+  rightArrow: {fileID: 157816110090255569}
 --- !u!212 &157816109307865274
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -225,6 +284,8 @@ GameObject:
   m_Component:
   - component: {fileID: 157816110090255568}
   - component: {fileID: 157816110090255571}
+  - component: {fileID: 1370280915}
+  - component: {fileID: 1370280916}
   m_Layer: 0
   m_Name: BookRightArrow
   m_TagString: Untagged
@@ -283,7 +344,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: f276eaac30f2c514da456dae61c6321a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -295,6 +356,44 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1370280915
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 157816110090255569}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.011101961, y: -0.08135623}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.82, y: 0.72}
+    newSize: {x: 0.82, y: 0.72}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.3306947, y: 0.8827125}
+  m_EdgeRadius: 0
+--- !u!114 &1370280916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 157816110090255569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b227ec0128181374ea6442a4a4873c75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5719877881738838330
 GameObject:
   m_ObjectHideFlags: 0
@@ -306,6 +405,7 @@ GameObject:
   - component: {fileID: 1480853220305889057}
   - component: {fileID: 3981370695466655182}
   - component: {fileID: 6512250573627172710}
+  - component: {fileID: 1414437816}
   m_Layer: 0
   m_Name: BookClose
   m_TagString: Untagged
@@ -364,7 +464,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: ccf20225c17d21c41b974ac03e3cfb6c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -389,7 +489,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.062918425, y: -0.007544756}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -400,8 +500,21 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5466667, y: 0.48}
+  m_Size: {x: 0.93424463, y: 0.82705736}
   m_EdgeRadius: 0
+--- !u!114 &1414437816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5719877881738838330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 450fb47253b459446a4aae78d491c22a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bookObject: {fileID: 0}
 --- !u!1001 &4013242313533851803
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -476,6 +589,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: caf5856c1349fa24cb94603ce82e0663, type: 3}
+--- !u!1 &157816109886830593 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3855444620471431322, guid: caf5856c1349fa24cb94603ce82e0663,
+    type: 3}
+  m_PrefabInstance: {fileID: 4013242313533851803}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &157816109886830592 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3855444620471431323, guid: caf5856c1349fa24cb94603ce82e0663,
@@ -637,6 +756,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f00ae489c488a1d4cbc7de3716c91397, type: 3}
+--- !u!1 &2533476808886645182 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6087861029307004177, guid: f00ae489c488a1d4cbc7de3716c91397,
+    type: 3}
+  m_PrefabInstance: {fileID: 8598738269760996527}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2533476808886645183 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6087861029307004176, guid: f00ae489c488a1d4cbc7de3716c91397,
