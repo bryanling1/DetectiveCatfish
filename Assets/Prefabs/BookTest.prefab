@@ -26,7 +26,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3140656268387137245}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.42, y: 6.53, z: -99}
   m_LocalScale: {x: 2.23, y: 2.23, z: 2.23}
   m_Children: []
@@ -96,7 +96,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minX: -5
   maxX: 5
-  minY: 4
+  minY: 5
   maxY: 10
   holdSecondsToDrag: 0.5
   OpenedBook: {fileID: 0}
